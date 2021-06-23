@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"TabPagerControllerDemoController";
+    self.title = @"TabPagerController";
     self.tabBarHeight = 50;
     self.tabBar.layout.barStyle = TYPagerBarStyleProgressView;
     self.tabBar.layout.cellWidth = CGRectGetWidth(self.view.frame)/3;

@@ -18,6 +18,16 @@
 		2B9C0F5B1F0E11E7009BC0BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B9C0F591F0E11E7009BC0BD /* LaunchScreen.storyboard */; };
 		2BE6874E1F1EEFF9001FE46D /* TabPagerViewDmeoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6874D1F1EEFF9001FE46D /* TabPagerViewDmeoController.m */; };
 		2BE687EB1F1F5BDD001FE46D /* PagerControllerDmeoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE687EA1F1F5BDD001FE46D /* PagerControllerDmeoController.m */; };
+		39150FDC2680C8B50078845B /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39150FC42680C8B40078845B /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		39150FDD2680C8B50078845B /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39150FCD2680C8B40078845B /* ViewController+MASAdditions.m */; };
+		39150FDE2680C8B50078845B /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 39150FD12680C8B40078845B /* MASCompositeConstraint.m */; };
+		39150FDF2680C8B50078845B /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 39150FD22680C8B40078845B /* MASConstraintMaker.m */; };
+		39150FE02680C8B50078845B /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 39150FD32680C8B50078845B /* MASLayoutConstraint.m */; };
+		39150FE12680C8B50078845B /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39150FD42680C8B50078845B /* NSArray+MASAdditions.m */; };
+		39150FE22680C8B50078845B /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39150FD52680C8B50078845B /* View+MASAdditions.m */; };
+		39150FE32680C8B50078845B /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 39150FD82680C8B50078845B /* MASConstraint.m */; };
+		39150FE42680C8B50078845B /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 39150FDA2680C8B50078845B /* MASViewConstraint.m */; };
+		39150FE52680C8B50078845B /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 39150FDB2680C8B50078845B /* MASViewAttribute.m */; };
 		B0284FE11F1E595D00C733E6 /* TabPagerControllerDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0284FE01F1E595D00C733E6 /* TabPagerControllerDemoController.m */; };
 		B072EC071F1E37B100736A2E /* TYTabPagerBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B072EBF81F1E37B100736A2E /* TYTabPagerBar.m */; };
 		B072EC081F1E37B100736A2E /* TYTabPagerBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B072EBFA1F1E37B100736A2E /* TYTabPagerBarCell.m */; };
@@ -51,6 +61,31 @@
 		2BE6874D1F1EEFF9001FE46D /* TabPagerViewDmeoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabPagerViewDmeoController.m; sourceTree = "<group>"; };
 		2BE687E91F1F5BDD001FE46D /* PagerControllerDmeoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagerControllerDmeoController.h; sourceTree = "<group>"; };
 		2BE687EA1F1F5BDD001FE46D /* PagerControllerDmeoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagerControllerDmeoController.m; sourceTree = "<group>"; };
+		39150FC32680C8B40078845B /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		39150FC42680C8B40078845B /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		39150FC52680C8B40078845B /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		39150FC62680C8B40078845B /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		39150FC72680C8B40078845B /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		39150FC82680C8B40078845B /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		39150FC92680C8B40078845B /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		39150FCA2680C8B40078845B /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		39150FCB2680C8B40078845B /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		39150FCC2680C8B40078845B /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		39150FCD2680C8B40078845B /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		39150FCE2680C8B40078845B /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		39150FCF2680C8B40078845B /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		39150FD02680C8B40078845B /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		39150FD12680C8B40078845B /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		39150FD22680C8B40078845B /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		39150FD32680C8B50078845B /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		39150FD42680C8B50078845B /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		39150FD52680C8B50078845B /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		39150FD62680C8B50078845B /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		39150FD72680C8B50078845B /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		39150FD82680C8B50078845B /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		39150FD92680C8B50078845B /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		39150FDA2680C8B50078845B /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		39150FDB2680C8B50078845B /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		B0284FDF1F1E595D00C733E6 /* TabPagerControllerDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabPagerControllerDemoController.h; sourceTree = "<group>"; };
 		B0284FE01F1E595D00C733E6 /* TabPagerControllerDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabPagerControllerDemoController.m; sourceTree = "<group>"; };
 		B072EBF71F1E37B100736A2E /* TYTabPagerBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerBar.h; sourceTree = "<group>"; };
@@ -103,25 +138,16 @@
 		2B9C0F4A1F0E11E7009BC0BD /* TYPagerControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				39150FC22680C8B40078845B /* Masonry */,
 				B072EBF51F1E37B100736A2E /* TYPagerController */,
 				2B9C0F4E1F0E11E7009BC0BD /* AppDelegate.h */,
 				2B9C0F4F1F0E11E7009BC0BD /* AppDelegate.m */,
 				2B9C0F511F0E11E7009BC0BD /* ViewController.h */,
 				2B9C0F521F0E11E7009BC0BD /* ViewController.m */,
-				B082E5771F0E79830084C952 /* PagerViewDmeoController.h */,
-				B082E5781F0E79830084C952 /* PagerViewDmeoController.m */,
-				2BE687E91F1F5BDD001FE46D /* PagerControllerDmeoController.h */,
-				2BE687EA1F1F5BDD001FE46D /* PagerControllerDmeoController.m */,
-				2BE6874C1F1EEFF9001FE46D /* TabPagerViewDmeoController.h */,
-				2BE6874D1F1EEFF9001FE46D /* TabPagerViewDmeoController.m */,
-				B0284FDF1F1E595D00C733E6 /* TabPagerControllerDemoController.h */,
-				B0284FE01F1E595D00C733E6 /* TabPagerControllerDemoController.m */,
-				2B0D5BB61F15FD1F00A4B8B1 /* CollectionViewController.h */,
-				2B0D5BB71F15FD1F00A4B8B1 /* CollectionViewController.m */,
-				2B0D5BB81F15FD1F00A4B8B1 /* CustomViewController.h */,
-				2B0D5BB91F15FD1F00A4B8B1 /* CustomViewController.m */,
-				2B0D5BBF1F15FD5100A4B8B1 /* ListViewController.h */,
-				2B0D5BC01F15FD5100A4B8B1 /* ListViewController.m */,
+				39CF5BB02670682500D5BB52 /* PagerView */,
+				39CF5BB22670683C00D5BB52 /* TabPagerView */,
+				39CF5BB42670684900D5BB52 /* PagerController */,
+				39CF5BB62670685800D5BB52 /* TabPagerController */,
 				2B9C0F541F0E11E7009BC0BD /* Main.storyboard */,
 				2B9C0F571F0E11E7009BC0BD /* Assets.xcassets */,
 				2B9C0F591F0E11E7009BC0BD /* LaunchScreen.storyboard */,
@@ -137,6 +163,80 @@
 				2B9C0F4C1F0E11E7009BC0BD /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39150FC22680C8B40078845B /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				39150FC32680C8B40078845B /* MASCompositeConstraint.h */,
+				39150FD12680C8B40078845B /* MASCompositeConstraint.m */,
+				39150FCF2680C8B40078845B /* MASConstraint.h */,
+				39150FD82680C8B50078845B /* MASConstraint.m */,
+				39150FC52680C8B40078845B /* MASConstraint+Private.h */,
+				39150FC82680C8B40078845B /* MASConstraintMaker.h */,
+				39150FD22680C8B40078845B /* MASConstraintMaker.m */,
+				39150FC62680C8B40078845B /* MASLayoutConstraint.h */,
+				39150FD32680C8B50078845B /* MASLayoutConstraint.m */,
+				39150FD72680C8B50078845B /* Masonry.h */,
+				39150FCB2680C8B40078845B /* MASUtilities.h */,
+				39150FCC2680C8B40078845B /* MASViewAttribute.h */,
+				39150FDB2680C8B50078845B /* MASViewAttribute.m */,
+				39150FCE2680C8B40078845B /* MASViewConstraint.h */,
+				39150FDA2680C8B50078845B /* MASViewConstraint.m */,
+				39150FCA2680C8B40078845B /* NSArray+MASAdditions.h */,
+				39150FD42680C8B50078845B /* NSArray+MASAdditions.m */,
+				39150FC72680C8B40078845B /* NSArray+MASShorthandAdditions.h */,
+				39150FD02680C8B40078845B /* NSLayoutConstraint+MASDebugAdditions.h */,
+				39150FC42680C8B40078845B /* NSLayoutConstraint+MASDebugAdditions.m */,
+				39150FC92680C8B40078845B /* View+MASAdditions.h */,
+				39150FD52680C8B50078845B /* View+MASAdditions.m */,
+				39150FD62680C8B50078845B /* View+MASShorthandAdditions.h */,
+				39150FD92680C8B50078845B /* ViewController+MASAdditions.h */,
+				39150FCD2680C8B40078845B /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		39CF5BB02670682500D5BB52 /* PagerView */ = {
+			isa = PBXGroup;
+			children = (
+				B082E5771F0E79830084C952 /* PagerViewDmeoController.h */,
+				B082E5781F0E79830084C952 /* PagerViewDmeoController.m */,
+			);
+			path = PagerView;
+			sourceTree = "<group>";
+		};
+		39CF5BB22670683C00D5BB52 /* TabPagerView */ = {
+			isa = PBXGroup;
+			children = (
+				2BE6874C1F1EEFF9001FE46D /* TabPagerViewDmeoController.h */,
+				2BE6874D1F1EEFF9001FE46D /* TabPagerViewDmeoController.m */,
+			);
+			path = TabPagerView;
+			sourceTree = "<group>";
+		};
+		39CF5BB42670684900D5BB52 /* PagerController */ = {
+			isa = PBXGroup;
+			children = (
+				2BE687E91F1F5BDD001FE46D /* PagerControllerDmeoController.h */,
+				2BE687EA1F1F5BDD001FE46D /* PagerControllerDmeoController.m */,
+			);
+			path = PagerController;
+			sourceTree = "<group>";
+		};
+		39CF5BB62670685800D5BB52 /* TabPagerController */ = {
+			isa = PBXGroup;
+			children = (
+				B0284FDF1F1E595D00C733E6 /* TabPagerControllerDemoController.h */,
+				B0284FE01F1E595D00C733E6 /* TabPagerControllerDemoController.m */,
+				2B0D5BB61F15FD1F00A4B8B1 /* CollectionViewController.h */,
+				2B0D5BB71F15FD1F00A4B8B1 /* CollectionViewController.m */,
+				2B0D5BB81F15FD1F00A4B8B1 /* CustomViewController.h */,
+				2B0D5BB91F15FD1F00A4B8B1 /* CustomViewController.m */,
+				2B0D5BBF1F15FD5100A4B8B1 /* ListViewController.h */,
+				2B0D5BC01F15FD5100A4B8B1 /* ListViewController.m */,
+			);
+			path = TabPagerController;
 			sourceTree = "<group>";
 		};
 		B072EBF51F1E37B100736A2E /* TYPagerController */ = {
@@ -212,6 +312,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -244,13 +345,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B0D5BBC1F15FD1F00A4B8B1 /* CollectionViewController.m in Sources */,
+				39150FE52680C8B50078845B /* MASViewAttribute.m in Sources */,
 				B072EC0D1F1E37B100736A2E /* TYPagerView.m in Sources */,
 				2B9C0F531F0E11E7009BC0BD /* ViewController.m in Sources */,
 				B072EC071F1E37B100736A2E /* TYTabPagerBar.m in Sources */,
 				B072EC0A1F1E37B100736A2E /* TYTabPagerController.m in Sources */,
 				B072EC081F1E37B100736A2E /* TYTabPagerBarCell.m in Sources */,
+				39150FDD2680C8B50078845B /* ViewController+MASAdditions.m in Sources */,
 				B0284FE11F1E595D00C733E6 /* TabPagerControllerDemoController.m in Sources */,
+				39150FE22680C8B50078845B /* View+MASAdditions.m in Sources */,
+				39150FE42680C8B50078845B /* MASViewConstraint.m in Sources */,
 				B072EC0B1F1E37B100736A2E /* TYTabPagerView.m in Sources */,
+				39150FDF2680C8B50078845B /* MASConstraintMaker.m in Sources */,
+				39150FDC2680C8B50078845B /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				39150FE32680C8B50078845B /* MASConstraint.m in Sources */,
+				39150FDE2680C8B50078845B /* MASCompositeConstraint.m in Sources */,
+				39150FE02680C8B50078845B /* MASLayoutConstraint.m in Sources */,
 				2B0D5BC11F15FD5100A4B8B1 /* ListViewController.m in Sources */,
 				B072EC0E1F1E37B100736A2E /* TYPagerViewLayout.m in Sources */,
 				2BE687EB1F1F5BDD001FE46D /* PagerControllerDmeoController.m in Sources */,
@@ -258,6 +368,7 @@
 				B072EC0C1F1E37B100736A2E /* TYPagerController.m in Sources */,
 				2B9C0F501F0E11E7009BC0BD /* AppDelegate.m in Sources */,
 				B072EC091F1E37B100736A2E /* TYTabPagerBarLayout.m in Sources */,
+				39150FE12680C8B50078845B /* NSArray+MASAdditions.m in Sources */,
 				2B0D5BBD1F15FD1F00A4B8B1 /* CustomViewController.m in Sources */,
 				B082E5791F0E79830084C952 /* PagerViewDmeoController.m in Sources */,
 				2B9C0F4D1F0E11E7009BC0BD /* main.m in Sources */,

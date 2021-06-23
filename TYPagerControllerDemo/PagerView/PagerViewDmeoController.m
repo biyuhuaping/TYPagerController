@@ -11,8 +11,8 @@
 #import "TYTabPagerBar.h"
 
 @interface PagerViewDmeoController ()<TYPagerViewDataSource, TYPagerViewDelegate,TYTabPagerBarDataSource,TYTabPagerBarDelegate>
-@property (nonatomic, weak) TYTabPagerBar *tabBar;
-@property (nonatomic, weak) TYPagerView *pageView;
+@property (nonatomic, strong) TYTabPagerBar *tabBar;
+@property (nonatomic, strong) TYPagerView *pageView;
 
 @property (nonatomic, strong) NSArray *datas;
 

@@ -8,10 +8,11 @@
 
 #import "TabPagerViewDmeoController.h"
 #import "TYTabPagerView.h"
+#import "Masonry.h"
 
 @interface TabPagerViewDmeoController ()<TYTabPagerViewDataSource, TYTabPagerViewDelegate>
 
-@property (nonatomic, weak) TYTabPagerView *pagerView;
+@property (nonatomic, strong) TYTabPagerView *pagerView;
 
 @property (nonatomic, strong) NSArray *datas;
 
@@ -24,24 +25,22 @@
     // Do any additional setup after loading the view.
     self.title = @"TabPagerViewDmeoController";
     self.view.backgroundColor = [UIColor whiteColor];
-    [self addTabPagerView];
     
+    [self.view addSubview:self.pagerView];
+    [self.pagerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        if (@available(iOS 11.0, *)) {
+            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        } else {
+            // Fallback on earlier versions
+        }
+        make.leading.trailing.bottom.equalTo(self.view);
+    }];
     [self loadData];
 }
 
-- (void)addTabPagerView {
-    TYTabPagerView *pagerView = [[TYTabPagerView alloc]init];
-    pagerView.tabBar.layout.barStyle = TYPagerBarStyleCoverView;
-    pagerView.tabBar.progressView.backgroundColor = [UIColor lightGrayColor];
-    pagerView.dataSource = self;
-    pagerView.delegate = self;
-    [self.view addSubview:pagerView];
-    _pagerView = pagerView;
-}
-
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    _pagerView.frame = CGRectMake(0, CGRectGetMaxY(self.navigationController.navigationBar.frame), CGRectGetWidth(self.view.frame),CGRectGetHeight(self.view.frame)-CGRectGetMaxY(self.navigationController.navigationBar.frame));
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (void)loadData {
@@ -51,13 +50,11 @@
     }
     _datas = [datas copy];
     
-    [_pagerView reloadData];
+    [self.pagerView reloadData];
     //[_pagerView scrollToViewAtIndex:1 animate:YES];
 }
 
-
 #pragma mark - TYTabPagerViewDataSource
-
 - (NSInteger)numberOfViewsInTabPagerView {
     return _datas.count;
 }
@@ -74,19 +71,17 @@
     return title;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - lazy
+- (TYTabPagerView *)pagerView{
+    if (!_pagerView) {
+        TYTabPagerView *pagerView = [[TYTabPagerView alloc]init];
+        pagerView.tabBar.layout.barStyle = TYPagerBarStyleCoverView;
+        pagerView.tabBar.progressView.backgroundColor = [UIColor lightGrayColor];
+        pagerView.dataSource = self;
+        pagerView.delegate = self;
+        _pagerView = pagerView;
+    }
+    return _pagerView;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
