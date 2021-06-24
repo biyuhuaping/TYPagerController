@@ -1,0 +1,44 @@
+//
+//  PrefixHeader.pch
+//  TYPagerControllerDemo
+//
+//  Created by ZB on 2021/6/24.
+//  Copyright © 2021 tany. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Masonry.h"
+
+
+#pragma mark - 设备尺寸相关
+
+#define kScreenBounds   [UIScreen mainScreen].bounds
+#define kScreenWidth    CGRectGetWidth([UIScreen mainScreen].bounds)
+#define kScreenHeight   CGRectGetHeight([UIScreen mainScreen].bounds)
+
+//比例宽高
+#define kScaleW(W) (W*(kScreenWidth/375))
+#define kScaleH(H) (H*(kScreenHeight/667))
+
+
+#define IS_IPhoneXLater (kScreenWidth >=375.0f && kScreenHeight >=812.0f)
+
+/*状态栏高度*/
+#define kStatusBarH (IS_IPhoneXLater ? 44 : 20)
+
+/*状态栏和导航栏总高度*/
+#define kNavBarH (IS_IPhoneXLater ? 88 : 64)
+
+/*TabBar高度*/
+#define kTabBarH  (IS_IPhoneXLater ? 83 : 49)
+
+/*底部安全区域远离高度*/
+#define kSpaceBottomMarea_H (IS_IPhoneXLater ? 34 : 0)
+
+/*导航条和Tabbar总高度*/
+#define kNavAndTabHeight (kStatusBarH + kTabBarH)
+
+
+#endif /* PrefixHeader_pch */

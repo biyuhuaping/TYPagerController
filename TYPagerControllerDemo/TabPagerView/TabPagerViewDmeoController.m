@@ -8,7 +8,6 @@
 
 #import "TabPagerViewDmeoController.h"
 #import "TYTabPagerView.h"
-#import "Masonry.h"
 
 @interface TabPagerViewDmeoController ()<TYTabPagerViewDataSource, TYTabPagerViewDelegate>
 
@@ -28,11 +27,7 @@
     
     [self.view addSubview:self.pagerView];
     [self.pagerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        if (@available(iOS 11.0, *)) {
-            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
-        } else {
-            // Fallback on earlier versions
-        }
+        make.top.equalTo(self.view).offset(kNavBarH);
         make.leading.trailing.bottom.equalTo(self.view);
     }];
     [self loadData];

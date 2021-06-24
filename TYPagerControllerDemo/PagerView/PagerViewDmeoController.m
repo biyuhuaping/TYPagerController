@@ -28,33 +28,27 @@
     UIBarButtonItem *reloadItem = [[UIBarButtonItem alloc]initWithTitle:@"reload" style:UIBarButtonItemStylePlain target:self action:@selector(reloadData)];
     UIBarButtonItem *scrollItem = [[UIBarButtonItem alloc]initWithTitle:@"update" style:UIBarButtonItemStylePlain target:self action:@selector(updateData)];
     self.navigationItem.rightBarButtonItems = @[reloadItem,scrollItem];
-    [self addPagerTabBar];
-    [self addPagerView];
+    
+    [self.view addSubview:self.tabBar];
+    [self.view addSubview:self.pageView];
+    
+    [self.tabBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(kNavBarH);
+        make.leading.trailing.equalTo(self.view);
+        make.height.equalTo(@44);
+    }];
+    
+    [self.pageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.tabBar.mas_bottom);
+        make.leading.trailing.bottom.equalTo(self.view);
+    }];
     
     [self loadData];
 }
 
-- (void)addPagerTabBar {
-    TYTabPagerBar *tabBar = [[TYTabPagerBar alloc]init];
-    tabBar.layout.barStyle = TYPagerBarStyleProgressElasticView;
-    tabBar.dataSource = self;
-    tabBar.delegate = self;
-    [tabBar registerClass:[TYTabPagerBarCell class] forCellWithReuseIdentifier:[TYTabPagerBarCell cellIdentifier]];
-    [self.view addSubview:tabBar];
-    _tabBar = tabBar;
-}
-
-- (void)addPagerView {
-    TYPagerView *pageView = [[TYPagerView alloc]init];
-    //pageView.layout.progressAnimateEnabel = NO;
-    //pageView.layout.prefetchItemCount = 1;
-    pageView.layout.autoMemoryCache = NO;
-    pageView.dataSource = self;
-    pageView.delegate = self;
-    // you can rigsiter cell like tableView
-    [pageView.layout registerClass:[UIView class] forItemWithReuseIdentifier:@"cellId"];
-    [self.view addSubview:pageView];
-    _pageView = pageView;
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (void)loadData {
@@ -78,20 +72,12 @@
     [_pageView updateData];
 }
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    _tabBar.frame = CGRectMake(0, CGRectGetMaxY(self.navigationController.navigationBar.frame), CGRectGetWidth(self.view.frame), 36);
-    _pageView.frame = CGRectMake(0, CGRectGetMaxY(_tabBar.frame), CGRectGetWidth(self.view.frame), 300);
-}
-
 - (void)reloadData {
     [_tabBar reloadData];
     [_pageView reloadData];
 }
 
-
 #pragma mark - TYTabPagerBarDataSource
-
 - (NSInteger)numberOfItemsInPagerTabBar {
     return _datas.count;
 }
@@ -156,19 +142,32 @@
     //NSLog(@"pagerViewDidEndScrolling");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - lazy
+- (TYPagerView *)pageView{
+    if (!_pageView) {
+        TYPagerView *pageView = [[TYPagerView alloc]init];
+        //pageView.layout.progressAnimateEnabel = NO;
+        //pageView.layout.prefetchItemCount = 1;
+        pageView.layout.autoMemoryCache = NO;
+        pageView.dataSource = self;
+        pageView.delegate = self;
+        // you can rigsiter cell like tableView
+        [pageView.layout registerClass:[UIView class] forItemWithReuseIdentifier:@"cellId"];
+        _pageView = pageView;
+    }
+    return _pageView;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (TYTabPagerBar *)tabBar{
+    if (!_tabBar) {
+        TYTabPagerBar *tabBar = [[TYTabPagerBar alloc]init];
+        tabBar.layout.barStyle = TYPagerBarStyleProgressElasticView;
+        tabBar.dataSource = self;
+        tabBar.delegate = self;
+        [tabBar registerClass:[TYTabPagerBarCell class] forCellWithReuseIdentifier:[TYTabPagerBarCell cellIdentifier]];
+        _tabBar = tabBar;
+    }
+    return _tabBar;
 }
-*/
 
 @end

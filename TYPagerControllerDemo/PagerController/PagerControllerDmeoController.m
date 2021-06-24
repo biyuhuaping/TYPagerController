@@ -12,7 +12,6 @@
 #import "ListViewController.h"
 #import "CollectionViewController.h"
 #import "CustomViewController.h"
-#import "Masonry.h"
 
 @interface PagerControllerDmeoController ()<TYTabPagerBarDataSource,TYTabPagerBarDelegate,TYPagerControllerDataSource,TYPagerControllerDelegate>
 
@@ -36,11 +35,7 @@
     [self.view addSubview:self.pagerController.view];
 
     [self.tabBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        if (@available(iOS 11.0, *)) {
-            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
-        } else {
-            // Fallback on earlier versions
-        }
+        make.top.equalTo(self.view).offset(kNavBarH);
         make.leading.trailing.equalTo(self.view);
         make.height.equalTo(@44);
     }];
