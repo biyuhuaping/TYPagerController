@@ -130,7 +130,7 @@
 }
 
 - (void)pagerView:(TYPagerView *)pagerView transitionFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex progress:(CGFloat)progress {
-    //NSLog(@"fromIndex:%ld, toIndex:%ld progress%.3f",fromIndex,toIndex,progress);
+    NSLog(@"fromIndex:%ld, toIndex:%ld progress%.3f",fromIndex,toIndex,progress);
     [_tabBar scrollToItemFromIndex:fromIndex toIndex:toIndex progress:progress];
 }
 
